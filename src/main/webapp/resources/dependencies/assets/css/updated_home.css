@@ -1,0 +1,91 @@
+
+.photo-div {
+	margin-right: 1%;
+	margin-left: 1%;
+	height: 22vh;
+}
+
+#photo-1 {
+	background:url("../images/MartaSanya/IMG_5420.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-2 {
+	background:url("../images/Dinara/IMG_6137.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-3 {
+	background:url("../images/khristya/IMG_1240.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-4 {
+	background:url("../images/YarkoNastya/IMG_9312.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-5 {
+	background:url("../images/khristya/IMG_1272.jpg");
+	/*background-size: cover;*/
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-6 {
+	background:url("../images/MartaSanya/IMG_5413.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-7 {
+	background:url("../images/Dinara/IMG_6154.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-8 {
+	background:url("../images/YarkoNastya/IMG_9641-2.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-9 {
+	background:url("../images/Dinara/IMG_6154.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-10 {
+	background:url("../images/YarkoNastya/IMG_9521.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-11 {
+	background:url("../images/khristya/IMG_1316.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#photo-12 {
+	background:url("../images/MartaSanya/IMG_5099.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/util
+			http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+    <mvc:annotation-driven />
+
+    <!--<import resource="controllers.xml" />-->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/pages/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+
+    <!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- max upload size in bytes -->
+        <property name="maxUploadSize" value="20971520" /> <!-- 20MB -->
+
+        <!-- max size of file in memory (in bytes) -->
+        <property name="maxInMemorySize" value="1048576" /> <!-- 1MB -->
+
+    </bean>
+    <!-- Configure to plugin JSON as request and response in method handler -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="jsonMessageConverter" />
+            </list>
+        </property>
+    </bean>
+
+    <!-- Configure bean to convert JSON to POJO and vice versa -->
+    <bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+    </bean>
+
+
+    <!--<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource" autowire="byName">-->
+
+        <!--<property name="basenames">-->
+            <!--<list>-->
+                <!--<value>classpath:messages</value>-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--&lt;!&ndash; <property name="cacheSeconds" value="1" /> &ndash;&gt;-->
+    <!--</bean>-->
+
+
+    <!--<mvc:resources mapping="/assets/**" location="/resources/dependencies/assets/" />-->
+    <!--<mvc:resources mapping="/resources/**" location="/resources/" />-->
+    <!--<mvc:resources mapping="favico.ico" location="/resources/" />-->
+    <!--<mvc:resources mapping="resources/**" location="/resources/" />-->
+    <!--<mvc:resources mapping="resouces/js/**" location="/resouces/js/" />-->
+    <!--<mvc:resources mapping="resouces/css/**" location="/resouces/css/" />-->
+    <!--<mvc:resources mapping="dependencies/**" location="/resources/dependencies/" />-->
+    <!--<mvc:resources mapping="#/resources/images/logos/**" location="/resources/images/logos/" />-->
+
+</beans>
+
+
+
+

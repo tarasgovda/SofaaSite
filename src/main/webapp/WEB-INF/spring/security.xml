@@ -1,0 +1,31 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security" xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+		   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		   http://www.springframework.org/schema/security
+		   http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+    <beans:bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+    </beans:bean>
+
+    <!--<authentication-manager id="authenticationManager">-->
+        <!--<authentication-provider user-service-ref="userDetailServiceImpl">-->
+            <!--<password-encoder ref="bCryptPasswordEncoder"></password-encoder>-->
+        <!--</authentication-provider>-->
+    <!--</authentication-manager>-->
+    <!--<http use-expressions="true" auto-config="false" authentication-manager-ref="authenticationManager">-->
+        <!--<http-basic />-->
+        <!--<csrf disabled="true" />-->
+
+        <!--&lt;!&ndash; 'ROLE_PAYED_USER' &ndash;&gt;-->
+        <!--<intercept-url pattern="/public/**" access="hasAnyRole('ROLE_ANONYMOUS','ROLE_USER' )" />-->
+        <!--<intercept-url pattern="/protected/**" access="hasAnyRole('ROLE_USER')" />-->
+        <!--<intercept-url pattern="/payment/**" access="hasAnyRole('ROLE_USER')" />-->
+        <!--<intercept-url pattern="/resource/**" access="hasAnyRole('ROLE_USER, ROLE_ADMIN')" />-->
+        <!--<intercept-url pattern="/admin/**" access="hasAnyRole('ROLE_ADMIN')" />-->
+    <!--</http>-->
+
+    <!--<beans:bean id="unauthorizedEntryPoint" class="com.sombrainc.configuration.UnauthorizedEntryPoint" />-->
+
+</beans:beans>
