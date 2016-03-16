@@ -11,7 +11,7 @@
 
     <mvc:annotation-driven />
 
-    <!--<import resource="controllers.xml" />-->
+    <import resource="controllers.xml" />
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
             <value>/WEB-INF/pages/</value>
@@ -22,32 +22,32 @@
     </bean>
 
     <!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/views/" />
-        <property name="suffix" value=".jsp" />
-    </bean>
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="prefix" value="/WEB-INF/views/" />-->
+        <!--<property name="suffix" value=".jsp" />-->
+    <!--</bean>-->
 
 
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <!-- max upload size in bytes -->
-        <property name="maxUploadSize" value="20971520" /> <!-- 20MB -->
+    <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+        <!--&lt;!&ndash; max upload size in bytes &ndash;&gt;-->
+        <!--<property name="maxUploadSize" value="20971520" /> &lt;!&ndash; 20MB &ndash;&gt;-->
 
-        <!-- max size of file in memory (in bytes) -->
-        <property name="maxInMemorySize" value="1048576" /> <!-- 1MB -->
+        <!--&lt;!&ndash; max size of file in memory (in bytes) &ndash;&gt;-->
+        <!--<property name="maxInMemorySize" value="1048576" /> &lt;!&ndash; 1MB &ndash;&gt;-->
 
-    </bean>
+    <!--</bean>-->
     <!-- Configure to plugin JSON as request and response in method handler -->
-    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
-        <property name="messageConverters">
-            <list>
-                <ref bean="jsonMessageConverter" />
-            </list>
-        </property>
-    </bean>
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+        <!--<property name="messageConverters">-->
+            <!--<list>-->
+                <!--<ref bean="jsonMessageConverter" />-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
-    <!-- Configure bean to convert JSON to POJO and vice versa -->
-    <bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
-    </bean>
+    <!--&lt;!&ndash; Configure bean to convert JSON to POJO and vice versa &ndash;&gt;-->
+    <!--<bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+    <!--</bean>-->
 
 
     <!--<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource" autowire="byName">-->
@@ -61,14 +61,14 @@
     <!--</bean>-->
 
 
-    <!--<mvc:resources mapping="/assets/**" location="/resources/dependencies/assets/" />-->
-    <!--<mvc:resources mapping="/resources/**" location="/resources/" />-->
-    <!--<mvc:resources mapping="favico.ico" location="/resources/" />-->
-    <!--<mvc:resources mapping="resources/**" location="/resources/" />-->
-    <!--<mvc:resources mapping="resouces/js/**" location="/resouces/js/" />-->
-    <!--<mvc:resources mapping="resouces/css/**" location="/resouces/css/" />-->
-    <!--<mvc:resources mapping="dependencies/**" location="/resources/dependencies/" />-->
-    <!--<mvc:resources mapping="#/resources/images/logos/**" location="/resources/images/logos/" />-->
+    <mvc:resources mapping="/assets/**" location="/resources/dependencies/assets/" />
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+    <mvc:resources mapping="favico.ico" location="/resources/" />
+    <mvc:resources mapping="resources/**" location="/resources/" />
+    <mvc:resources mapping="resouces/js/**" location="/resouces/js/" />
+    <mvc:resources mapping="resouces/css/**" location="/resouces/css/" />
+    <mvc:resources mapping="dependencies/**" location="/resources/dependencies/" />
+    <mvc:resources mapping="#/resources/images/logos/**" location="/resources/images/logos/" />
 
 </beans>
 
