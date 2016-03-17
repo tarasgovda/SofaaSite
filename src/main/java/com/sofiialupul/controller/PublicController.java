@@ -12,10 +12,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class PublicController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
     public String home() {
         return "index";
     }
 
+
+    @RequestMapping(value = "/gallery", method = RequestMethod.GET)
+    public String gallery() {
+        return "gallery";
+    }
 
 }

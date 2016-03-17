@@ -27,7 +27,7 @@
                     <div class="list-div">
                         <ul class="nav navbar-nav navbar-margin">
                             <li>
-                                <a href="gallery.html">Gallery</a>
+                                <a href="gallery">Gallery</a>
                             </li>
                             <li>
                                 <a href="about.htm">About</a>
