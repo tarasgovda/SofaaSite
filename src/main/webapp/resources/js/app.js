@@ -1,10 +1,13 @@
-angular.module('main',  [ 'ngRoute', 'ngCookies', 'ngMessages' ]).config(['$routeProvider', function($routeProvider) {
+angular.module('main', [ 'ngRoute']).config(['$routeProvider', function($routeProvider) {
 
         $routeProvider.when('/', {
             templateUrl : 'public/home',
             controller : HomeController
-        }).when('/gallery', {
-            templateUrl : 'gallery',
+        }).when('/home', {
+            templateUrl : 'public/home',
+            controller : HomeController
+        }).when('gallery', {
+            templateUrl : '/public/gallery',
             controller : HomeController
         }).otherwise('/');
     }]);
